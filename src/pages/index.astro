@@ -1,51 +1,12 @@
 ---
 import { getCollection } from "astro:content";
 import PageLayout from "@/layouts/Base";
-import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
-import { sortMDByDate } from "@/utils";
+import { getUniqueTags } from "@/utils";
 
-const MAX_POSTS = 10;
 const allPosts = await getCollection("post");
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+const allPostsByTag = getUniqueTags(allPosts);
 
-const cactusTech: Array<{ title: string; desc: string; href: string }> = [
-	{
-		title: "Astro",
-		desc: "Build fast websites, faster.",
-		href: "https://astro.build",
-	},
-	{
-		title: "Astro Assets",
-		desc: "Built-in optimized asset support.",
-		href: "https://docs.astro.build/en/guides/assets/",
-	},
-	{
-		title: "Tailwind CSS",
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
-		href: "https://tailwindcss.com",
-	},
-	{
-		title: "Markdown",
-		desc: "Simple and easy-to-use markup language.",
-		href: "https://www.markdownguide.org/",
-	},
-	{
-		title: "MDX",
-		desc: "Markdown for the component era.",
-		href: "https://mdxjs.com/",
-	},
-	{
-		title: "Satori",
-		desc: "Generating png Open Graph images for blog posts.",
-		href: "https://github.com/vercel/satori",
-	},
-	{
-		title: "Pagefind",
-		desc: "A fully static search library.",
-		href: "https://pagefind.app/",
-	},
-];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
@@ -54,44 +15,26 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 		<p class="mb-4">
 			Selamat datang di blog tutorial coding milik ELINS Research Club (ERC)! blog ini akan dikembangkan seiring berjalannya waktu.
 			kalau kamu tertarik untuk berkontribusi, kamu bisa menghubungi ketua ERC ya!
-			<br><br>dan btw, blog ini menggunakan template dari <span
-				><a href="https://github.com/chrismwilliams/astro-theme-cactus" class="sm:hover:underline">
-					Astro Cactus Blog Theme</a
-				></span
-			> just in case if you're wondering :)
+			<br><br>dan btw, blog ini menggunakan template dari <span><a href="https://github.com/chrismwilliams/astro-theme-cactus" class="sm:hover:underline">
+					Astro Cactus Blog Theme</a></span>, just in case you're wondering :)
 		</p>
 		<SocialList />
 	</section>
-	<section aria-label="tutorial list" class="mt-16">
-		<h2 class="title mb-4 text-xl">Posts</h2>
-		<ul class="space-y-4 sm:space-y-2">
+	<section aria-label="tutorial list" class="mt-16 h-2/5">
+		<h2 class="title mb-4 text-xl">Materi</h2>
+		<div class="flex flex-row space-x-10 sm:space-x-6 h-4/5 max-w-3xl overflow-x-auto">
 			{
-				allPostsByDate.map((p) => (
-					<li class="flex flex-col gap-x-2 sm:flex-row">
-						<PostPreview post={p} />
-					</li>
+				allPostsByTag.map((tag) => (
+				<a href={`/tags/${tag}/`}
+				aria-label={`View all posts with the tag: ${tag}`}>		
+						<div class="flex items-center justify-center rounded-md h-5 p-2 text-lime-950 text-xl text-wrap font-bold text-center"
+						style="background-image: linear-gradient(to right top, #7097b6, #548ea6, #3a8593, #277a7d, #1f6f65, #1e7562, #257b5c, #318154, #3e9b5e, #50b666, #65d16d, #7dec72);
+						width: 250px; height: 200px;">
+						{tag}
+						</div>
+					</a>
 				))
 			}
-		</ul>
+		</div>
 	</section>
-	<!-- <section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
-		<ul class="space-y-4 sm:space-y-2">
-			{
-				cactusTech.map(({ href, title, desc }) => (
-					<li>
-						<a
-							href={href}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="cactus-link inline-block"
-						>
-							{title}
-						</a>
-						:<p class="inline-block sm:mt-2">{desc}</p>
-					</li>
-				))
-			}
-		</ul>
-	</section> -->
 </PageLayout>

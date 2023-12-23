@@ -1,8 +1,8 @@
 ---
-title: "Setup Traefik + Portainer on a VPS & Docker"
-publishDate: "20 August 2023"
-description: "Tutorial walkthrough to help you setup your own server with vps, traefik and portainer"
-tags: ["traefik"]
+title: "Basic Programming with C++"
+publishDate: "22 December 2023"
+description: "Materi Pemrograman Dasar Dengan C++"
+tags: ["BasicProgrammingWithC++"]
 ---
 
 > on one of my quite weekends, i had nothing to do. Then i decided to try something with my laptop. Long story short i ended up spent the whole weekend to finish what i have started. I'll put all of them here so you can easily replicate it without having to spent too much time just like me. here we go!
