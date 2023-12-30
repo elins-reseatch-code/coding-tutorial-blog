@@ -25,7 +25,7 @@ const allPostsByTag = getUniqueTags(allPosts);
 		<div class="flex flex-row space-x-10 sm:space-x-6 h-4/5 max-w-3xl overflow-x-auto">
 			{
 				allPostsByTag.map((tag) => (
-				<a href={`/tags/${tag}/`}
+				<a href={`/coding-tutorial-blog/tags/${tag}/`}
 				aria-label={`View all posts with the tag: ${tag}`}>		
 						<div class="flex items-center justify-center rounded-md h-5 p-2 text-lime-950 text-xl text-wrap font-bold text-center"
 						style="background-image: linear-gradient(to right top, #7097b6, #548ea6, #3a8593, #277a7d, #1f6f65, #1e7562, #257b5c, #318154, #3e9b5e, #50b666, #65d16d, #7dec72);
