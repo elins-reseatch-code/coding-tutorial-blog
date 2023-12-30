@@ -1,7 +1,7 @@
 ---
-title: "Basic Programming with C++"
+title: "1. Apa Itu Pemrograman?"
 publishDate: "22 December 2023"
-description: "Materi Pemrograman Dasar Dengan C++ untuk elins pemula banget"
+description: "Basic Programming - Cerita tentang Pemrograman dan Bahasa Pemrograman"
 tags: ["BasicProgrammingWithC++"]
 ---
 

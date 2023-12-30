@@ -1,7 +1,7 @@
 export const MENU_LINKS = [
 	{
 		title: "Home",
-		path: "/coding-tutorial-blog",
+		path: "/coding-tutorial-blog/",
 	},
 	{
 		title: "About",
@@ -15,8 +15,8 @@ export const MENU_LINKS = [
 
 // ! Remember to add your own socials
 export const SOCIAL_LINKS = {
-	github: "https://github.com/ianugroho1994",
-	twitter: "https://twitter.com/ianugroho",
+	github: "https://github.com/elins-reseatch-code",
+	twitter: "https://www.instagram.com/erc.ugm/",
 	discord: "https://github.com/chrismwilliams/astro-cactus",
-	email: "ardianto.nugroho1994@gmail.com",
+	email: "erc.elinsugm@gmail.com",
 };
