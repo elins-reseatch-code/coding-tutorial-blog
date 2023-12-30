@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@/layouts/Base";
+import SocialList from "@/components/SocialList";
+import { getUniqueTags } from "@/utils";
+
+const allPosts = await getCollection("post");
+const allPostsByTag = getUniqueTags(allPosts);
+
+---
+
+<PageLayout meta={{ title: "Home" }}>
+	<section>
+		<h1 class="title mb-6">Hello World!</h1>
+		<p class="mb-4">
+			Selamat datang di blog tutorial coding milik ELINS Research Club (ERC)! blog ini akan dikembangkan seiring berjalannya waktu.
+			kalau kamu tertarik untuk berkontribusi, kamu bisa menghubungi ketua ERC ya!
+			<br><br>dan btw, blog ini menggunakan template dari <span><a href="https://github.com/chrismwilliams/astro-theme-cactus" class="sm:hover:underline">
+					Astro Cactus Blog Theme</a></span>, just in case you're wondering :)
+		</p>
+		<SocialList />
+	</section>
+	<section aria-label="tutorial list" class="mt-16 h-2/5">
+		<h2 class="title mb-4 text-xl">Materi</h2>
+		<div class="flex flex-row space-x-10 sm:space-x-6 h-4/5 max-w-3xl overflow-x-auto">
+			{
+				allPostsByTag.map((tag) => (
+				<a href={`/tags/${tag}/`}
+				aria-label={`View all posts with the tag: ${tag}`}>		
+						<div class="flex items-center justify-center rounded-md h-5 p-2 text-lime-950 text-xl text-wrap font-bold text-center"
+						style="background-image: linear-gradient(to right top, #7097b6, #548ea6, #3a8593, #277a7d, #1f6f65, #1e7562, #257b5c, #318154, #3e9b5e, #50b666, #65d16d, #7dec72);
+						width: 250px; height: 200px;">
+						{tag}
+						</div>
+					</a>
+				))
+			}
+		</div>
+	</section>
+</PageLayout>
