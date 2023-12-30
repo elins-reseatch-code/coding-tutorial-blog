@@ -9,7 +9,8 @@ import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 // https://astro.build/config
 export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
-	site: "https://elins-reseatch-code.github.io/coding-tutorial-blog/",
+	site: "https://elins-reseatch-code.github.io",
+	base: "/coding-tutorial-blog",
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
 		shikiConfig: {
