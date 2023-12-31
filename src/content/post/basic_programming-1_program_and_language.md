@@ -2,7 +2,7 @@
 title: "1. Apa Itu Pemrograman?"
 publishDate: "22 December 2023"
 description: "Basic Programming - Cerita tentang Pemrograman dan Bahasa Pemrograman"
-tags: ["BasicProgrammingWithC++"]
+tags: ["BasicProgramming"]
 ---
 
 # Bagaimana Komputer bekerja?
@@ -28,7 +28,7 @@ bayangkan kamu sedang berada di restoran untuk memesan makan malam. sebelum maka
 - setelah makanan jadi, hasilnya akan di tampilkan ke kamu, sama seperti program yang mengeluarkan hasil apapun yang kamu harapkan ketika membuat program
 
 ## kenapa harus diterjemahkan menjadi bahasa mesin?
-CPU bekerja secara digital, yang berarti mesin hanya mengenali perintah 0 dan 1 (sistem biner). Sedangkan manusia membuat program dengan bahasa yang mudah dimengerti oleh manusia lain, sehingga perlu dilakukan proses penterjemahan.
+CPU bekerja secara digital, yang berarti mesin hanya mengenali perintah 0 dan 1 (sistem biner). Sedangkan manusia membuat program dengan bahasa yang mudah dimengerti oleh manusia lain yaitu dengan menggunakan yang disebut bahasa pemrograman atau _Progamming Language_, sehingga pada akhirnya perlu dilakukan proses penerjemahan.
 
 # Bahasa Pemrograman
 bahasa pemrograman adalah sekumpulan aturan dan cara untuk menulis instruksi dalam program tertentu yang bisa dibaca oleh manusia atau _human friendly_.
