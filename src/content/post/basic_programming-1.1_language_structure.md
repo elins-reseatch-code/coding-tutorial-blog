@@ -1,7 +1,7 @@
 ---
 title: "1.1. Struktur Bahasa Pemrograman"
 publishDate: "22 December 2023"
-description: "Basic Programming - Cerita tentang Pemrograman dan Bahasa Pemrograman"
+description: "Basic Programming - Cerita tentang struktur bahasa pemrograman"
 tags: ["BasicProgramming"]
 ---
 
@@ -144,7 +144,7 @@ untuk mendapatkan binary file, kita harus melakukan proses build. build berarti 
 
 contoh perintah untuk menjalankan proses build di C++
 
-``` Console
+``` console
 g++ helloworld helloworld.cpp
 ```
 
